@@ -1,0 +1,7 @@
+{
+    "root": "./docs/guide",
+    "plugins": [
+        "-highlight",
+        "prism"
+    ]
+}

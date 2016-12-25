@@ -1,0 +1,34 @@
+@require 'melon/css/Button.styl';
+@require 'melon/css/Icon.styl';
+
+.ui-floating-action-button
+    position: fixed;
+
+    &-item
+        position: absolute;
+        padding: 0.5em 0;
+        transition: transform .5s ease-out, opacity .5s ease-out;
+
+        &:nth-child(n+2)::after
+            content: attr(data-title);
+            position: absolute;
+            padding: 0.25em 0.625em;
+            margin-top: -0.75em;
+            top: 50%;
+            white-space: nowrap;
+            font-size: 0.75em;
+            background: rgba(0, 0, 0, 0.4);
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 0.1875em;
+
+    &.variant-tr &-item,
+    &.variant-br &-item
+
+        &::after
+            right: 3.5em;
+
+    &.variant-tl &-item,
+    &.variant-bl &-item
+
+        &::after
+            left: 3.5em;

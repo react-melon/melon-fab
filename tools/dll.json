@@ -1,0 +1,9 @@
+{
+    "shallow-equal": [
+        "shallow-equal/objects"
+    ],
+    "melon": [
+        "melon/Button",
+        "melon/Icon"
+    ]
+}

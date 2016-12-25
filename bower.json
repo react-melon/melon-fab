@@ -1,0 +1,38 @@
+{
+    "name": "melon-fab",
+    "version": "1.0.0",
+    "homepage": "http://react-melon.github.io/melon-fab",
+    "authors": [
+        "ludafa@outlook.com"
+    ],
+    "description": "React Material Floating Action Button",
+    "main": "lib/index.js",
+    "moduleType": [
+        "umd"
+    ],
+    "keywords": [
+        "react",
+        "ui"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "dep",
+        "test",
+        "tests",
+        "src",
+        "doc",
+        "asset",
+        "_book",
+        ".Archive",
+        "books",
+        "example",
+        "tools"
+    ],
+    "dependencies": {
+        "react": "^0.14.8||^15.4.0",
+        "shallow-equal": "^1.0.0"
+    }
+}
