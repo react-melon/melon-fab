@@ -5,5 +5,8 @@
     "melon": [
         "melon/Button",
         "melon/Icon"
+    ],
+    "melon-core": [
+        "melon-core/classname/cxBuilder"
     ]
 }
