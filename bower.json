@@ -33,6 +33,7 @@
     ],
     "dependencies": {
         "react": "^0.14.8||^15.4.0",
-        "shallow-equal": "^1.0.0"
+        "shallow-equal": "^1.0.0",
+        "melon-core": "^0.4.1"
     }
 }
