@@ -1,6 +1,6 @@
 {
   "name": "melon-fab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Material Design Floating Action Button for React",
   "main": "./lib/index.js",
   "scripts": {
@@ -96,7 +96,7 @@
   "homepage": "https://github.com/react-melon/melon-fab#readme",
   "dependencies": {
     "classnames": "^2.2.5",
-    "melon": "^0.4.3",
+    "melon-core": ">=0.4.1",
     "react": "^0.14.8||^15.4.0",
     "shallow-equal": "^1.0.0"
   },
