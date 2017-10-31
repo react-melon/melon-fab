@@ -17,8 +17,6 @@ const css = new ExtractTextPlugin('styles.css');
 const config = {
 
     entry: [
-        'webpack-hot-middleware/client',
-        'webpack/hot/only-dev-server',
         path.join(__dirname, '../example/index.js')
     ],
 
@@ -27,7 +25,6 @@ const config = {
             {
                 test: /\.js?$/,
                 loaders: [
-                    'react-hot',
                     'babel?cacheDirectory'
                 ],
                 exclude: [
@@ -70,30 +67,17 @@ const config = {
     },
 
     plugins: [
-        new webpack.DllReferencePlugin({
-            context: '.',
-            manifest: require('../asset/inf-manifest.json')
-        }),
         css,
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             inject: true,
-            templateContent: (function () {
-                return fs
-                    .readFileSync(
-                        path.join(__dirname, '../example/index.html'),
-                        'utf8'
-                    )
-                    .replace(/<!--@inject=([\w._-]+)-->/ig, function ($0, $1) {
-                        return `<script src="${$1}"></script>`;
-                    });
-            })(),
-            filename: path.resolve(__dirname, '../asset/index.html'),
-            alwaysWriteToDisk: true
-        }),
-        new HtmlWebpackHarddiskPlugin()
-    ]
+            template: path.join(__dirname, '../example/index.html')
+        })
+    ],
+    devServer: {
+        port: 8080
+    }
 
 };
 

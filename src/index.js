@@ -3,13 +3,13 @@
  * @author leon <ludafa@outlook.com>
  */
 
-import React, {Component, PropTypes, cloneElement, Children} from 'react';
-import shallowEqual from 'shallow-equal/objects';
+import React, {PureComponent, cloneElement, Children} from 'react';
+import PropTypes from 'prop-types';
 import {create} from 'melon-core/classname/cxBuilder';
 
 const cx = create('FloatingActionButton');
 
-export default class FloatingActionButton extends Component {
+export default class FloatingActionButton extends PureComponent {
 
     constructor(...args) {
 
@@ -22,11 +22,6 @@ export default class FloatingActionButton extends Component {
         this.onMouseEnter = this.onMouseEnter.bind(this);
         this.onMouseLeave = this.onMouseLeave.bind(this);
 
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return !shallowEqual(nextProps, this.props)
-            || !shallowEqual(nextState, this.state);
     }
 
     onMouseEnter() {

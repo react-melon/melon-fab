@@ -2,7 +2,6 @@ node_modules
 dep
 coverage
 .edpproj
-src
 test
 npm-debug.log
 output
